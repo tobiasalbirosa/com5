@@ -2,12 +2,15 @@ float PJx, PJy;
 float velocidad;
 PImage imagen0, imagen1;
 int contar = 1;
+int diametro = width/3;
 float botonX, botonY, botonTamX, botonTamY;
 void setup() {
   size(640, 480);
   velocidad = 10;
   imagen0 = loadImage("0.png");
   imagen1 = loadImage("1.png");
+  botonX = width/2;
+  botonY = height/2;
 }
 
 void draw() {
@@ -25,6 +28,7 @@ void draw() {
 
     image(imagen0, PJx, PJy, width/10, height/10);
   }
+  circle(width/2, height/2, diametro);
 }
 
 void keyPressed() {
@@ -50,6 +54,10 @@ void keyPressed() {
   }
 }
 
-void mouseMoved(){
-  
+void mouseMoved() {
+  if (dist(mouseX, mouseY, botonX, botonY) < diametro / 2) {
+    println("Dentro del circulo");
+  } else {
+    println(" ");
+  }
 }
