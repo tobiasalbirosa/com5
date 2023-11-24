@@ -1,0 +1,3 @@
+¡Hola! /n Esto es un ejemplo de salto de línea con JS
+Esto seria una linea completa
+Y esto seria un text /n con tres /n saltos de línea
